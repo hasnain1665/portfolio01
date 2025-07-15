@@ -208,19 +208,6 @@ nav {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -330,7 +317,11 @@ nav {
   box-shadow: 0 15px 35px rgba(64, 224, 208, 0.4);
 }
 
-.hero-image {
+.hero-image-mobile {
+  display: none;
+}
+
+.hero-image-desktop {
   display: flex;
   justify-content: center;
 }
@@ -941,12 +932,22 @@ footer {
     display: block;
   }
 
+  .hero-image-desktop {
+    display: none;
+  }
+
+  .hero-image-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
   .nav-links {
     position: fixed;
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(47, 79, 79, 0.98);
+    background: rgba(16, 70, 71, 0.95) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
