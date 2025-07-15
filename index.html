@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasnain Yaseen | MERN Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div class="particle-background">
+      <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <p>Loading Portfolio...</p>
+      </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-brand">
+          <span class="logo">Hasnain Yaseen</span>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="linkedin-link">
+            <a href="https://www.linkedin.com/in/hasnainyaseen" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Hasnain Yaseen</h1>
+            <p class="subtitle">
+              MERN Stack Developer
+            </p>
+            <p class="description">
+              Specializing in building scalable web applications using React.js,
+              Node.js, Express.js, and MongoDB. Experienced in RESTful APIs, JWT
+              authentication, and modern development practices.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <img
+                src="./images/Image.jpeg"
+                alt="Hasnain Yaseen - MERN Stack Developer"
+                class="profile-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack" id="expertise">
+      <div class="container">
+        <h2 class="section-title">
+          Technical Expertise
+        </h2>
+        <div class="tech-grid">
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon">⚛️</div>
+            <h3>React.js</h3>
+            <p>
+              Modern frontend development with hooks, context API, and
+              responsive design
+            </p>
+          </div>
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon">🟢</div>
+            <h3>Node.js</h3>
+            <p>
+              Server-side JavaScript runtime for scalable backend applications
+            </p>
+          </div>
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon">🚀</div>
+            <h3>Express.js</h3>
+            <p>Fast and minimalist web application framework for Node.js</p>
+          </div>
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon">🍃</div>
+            <h3>MongoDB</h3>
+            <p>NoSQL database for flexible and scalable data storage</p>
+          </div>
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon">🛢️</div>
+            <h3>MySQL</h3>
+            <p>Relational database management and optimization</p>
+          </div>
+          <div class="tech-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon">🔐</div>
+            <h3>JWT Authentication</h3>
+            <p>Secure user authentication and authorization systems</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+      <div class="container">
+        <h2 class="section-title">Professional Training & Certifications</h2>
+        <p class="section-subtitle">
+          Continuous learning and professional development in modern
+          technologies
+        </p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">
+              <img
+                src="./images/systems-logo.svg"
+                alt="Systems Ltd Logo"
+                class="company-logo"
+              />
+            </div>
+            <h3>ITM Training Program</h3>
+            <p>
+              Full Stack Development - Systems Ltd. & BNU (Aug 2024 – Mar 2025)
+            </p>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">
+              <img
+                src="./images/microsoft-logo.svg"
+                alt="Microsoft Logo"
+                class="company-logo"
+              />
+            </div>
+            <h3>Microsoft Power BI Data Analyst</h3>
+            <p>Professional Certificate (June 2024 - Aug 2024)</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Development Projects</h2>
+        <div class="project-grid">
+          <div class="project-card" data-category="ecommerce">
+            <div class="project-image">
+              <img
+                src="./images/E-commerce Application.png"
+                alt="E-Commerce Web Application"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>E-Commerce Web Application</h3>
+              </div>
+              <p>
+                Full-featured e-commerce platform with user authentication,
+                admin dashboard, cart system, and product filtering. Built with
+                React.js, Node.js, Express.js, and MongoDB.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">JWT Auth</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/hasnain1665/Ecommerce-app" target="_blank" class="btn-view-details">
+                  <i class="fab fa-github"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="management">
+            <div class="project-image">
+              <img
+                src="./images/Tasks Management App.png"
+                alt="Task Management App"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Task Management Web Application</h3>
+              </div>
+              <p>
+                Full-stack task management system with CRUD operations, JWT
+                authentication, and real-time updates. Features include task
+                creation, editing, deletion, and status tracking.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">JWT Auth</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/hasnain1665/TaskManager-MERN" target="_blank" class="btn-view-details">
+                  <i class="fab fa-github"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img
+                src="./images/POS Application.png"
+                alt="Point of Sale System"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Point of Sale (POS) Application</h3>
+              </div>
+              <p>
+                Comprehensive POS system with inventory management, sales
+                tracking, and real-time stock synchronization. Built with
+                React.js, Node.js, and MySQL using Sequelize ORM.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React.js</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">Sequelize</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/hasnain1665/POS-FullStack" target="_blank" class="btn-view-details">
+                  <i class="fab fa-github"></i>
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+              Ready to build something amazing together? Let's connect and
+              discuss how we can bring your web development ideas to life.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3>Email</h3>
+                <p>hasnainyaseen15@gmail.com</p>
+                <a href="mailto:hasnainyaseen15@gmail.com" class="contact-link">
+                  Send Email
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="contact-card-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3>LinkedIn</h3>
+                <a
+                  href="https://www.linkedin.com/in/hasnainyaseen"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  Connect
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="contact-card-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3>GitHub</h3>
+                <a
+                  href="https://github.com/hasnain1665"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <div class="cta-content">
+              <h3>Ready to Get Started?</h3>
+              <p>
+                Download my resume to learn more about my experience and
+                qualifications in full stack development.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1LILb5CiQv5GhcBVKgRjOK_p0_MUPqUNC/view?usp=sharing"
+                target="_blank"
+                class="btn btn-resume-large"
+              >
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <i class="fas fa-code"></i>
+              <span>Hasnain Yaseen</span>
+            </div>
+            <p>
+              MERN Stack Developer specializing in modern web applications and
+              scalable software solutions.
+            </p>
+          </div>
+          <div class="footer-center">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#expertise">Expertise</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/hasnainyaseen"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:hasnainyaseen15@gmail.com" title="Gmail">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="https://github.com/hasnain1665"
+                target="_blank"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Hasnain Yaseen. All rights reserved.</p>
+          <p>Built with passion for modern web development</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
