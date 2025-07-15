@@ -12,12 +12,7 @@ body {
   background: linear-gradient(135deg, #2f4f4f 0%, #008b8b 50%, #2f4f4f 100%);
   min-height: 100vh;
   position: relative;
-}
-
-*,
-*::before,
-*::after {
-  color: inherit;
+  overflow-x: hidden;
 }
 
 .container {
@@ -239,6 +234,7 @@ nav {
   margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .hero-title {
@@ -253,12 +249,14 @@ nav {
   font-weight: 400;
   margin-bottom: 1rem;
   opacity: 0.9;
+  color: white;
 }
 
 .description {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   opacity: 0.8;
+  color: white;
 }
 
 .hero-buttons {
@@ -404,11 +402,13 @@ nav {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  color: white;
 }
 
 .tech-item p {
   opacity: 0.9;
   line-height: 1.6;
+  color: white;
 }
 
 /* Certifications Section */
@@ -438,7 +438,7 @@ nav {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   color: white;
   transition: all 0.3s ease;
@@ -477,12 +477,14 @@ nav {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .cert-card p {
   opacity: 0.9;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  color: white;
 }
 
 .btn-verify {
@@ -595,6 +597,7 @@ nav {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .project-type {
@@ -610,6 +613,7 @@ nav {
   opacity: 0.9;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .project-tags {
@@ -644,6 +648,7 @@ nav {
   transition: all 0.3s ease;
   flex: 1;
   text-decoration: none;
+  text-align: center;
 }
 
 .btn-view-details:hover {
@@ -718,11 +723,13 @@ nav {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .contact-card p {
   opacity: 0.9;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .contact-link {
@@ -752,12 +759,14 @@ nav {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .cta-content p {
   opacity: 0.9;
   margin-bottom: 2rem;
   font-size: 1.1rem;
+  color: white;
 }
 
 /* Footer */
@@ -784,6 +793,7 @@ footer {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .footer-logo i {
@@ -793,6 +803,7 @@ footer {
 .footer-left p {
   opacity: 0.8;
   line-height: 1.6;
+  color: white;
 }
 
 .footer-center h4,
@@ -800,10 +811,14 @@ footer {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .footer-center ul {
   list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+  padding: 0;
 }
 
 .footer-center li {
@@ -849,6 +864,7 @@ footer {
 
 .footer-bottom p {
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 /* Back to Top Button */
@@ -926,7 +942,33 @@ footer {
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-content {
@@ -935,7 +977,8 @@ footer {
     gap: 2rem;
   }
 
-  .hero-text h1 {
+  .hero-text h1,
+  .hero-title {
     font-size: 2.5rem;
   }
 
@@ -945,7 +988,7 @@ footer {
   }
 
   .tech-grid {
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr;
   }
 
   .cert-grid {
@@ -956,28 +999,36 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
   }
 
-  .hero-buttons {
+  .footer-center ul {
+    columns: 1;
+  }
+
+  .social-links {
     justify-content: center;
   }
 
-  .project-filter {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-cards {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-text h1 {
+  .hero-title {
     font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
   }
 
   .section-title {
@@ -989,27 +1040,34 @@ footer {
     height: 200px;
   }
 
-  .tech-item,
-  .cert-card,
-  .project-card,
-  .contact-card {
-    padding: 1.5rem;
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 45px;
-    height: 45px;
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
   }
 }
 
-/* Smooth Scrolling */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -1018,6 +1076,7 @@ html {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Custom scrollbar - completion */
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #40e0d0, #20b2aa);
   border-radius: 4px;
@@ -1027,8 +1086,165 @@ html {
   background: linear-gradient(135deg, #20b2aa, #40e0d0);
 }
 
-/* Hidden class for loading screen */
-.hidden {
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #40e0d0 rgba(255, 255, 255, 0.1);
+}
+
+/* Additional utility classes */
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+/* Animation classes */
+.fade-in {
   opacity: 0;
-  visibility: hidden;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.nav-links a:focus,
+.contact-link:focus {
+  outline: 2px solid #40e0d0;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-resume,
+  .btn-resume-large {
+    border: 2px solid currentColor;
+  }
+
+  .nav-links a,
+  .contact-link {
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .typing-text {
+    animation: none;
+    border-right: none;
+  }
+
+  .loader-circle {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .particle-background,
+  .loading-screen,
+  .scroll-indicator,
+  .back-to-top,
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  header {
+    position: static;
+    background: white;
+    color: black;
+  }
+
+  .hero,
+  .tech-stack,
+  .certifications,
+  .projects,
+  .contact {
+    background: white;
+    color: black;
+  }
+
+  .btn {
+    border: 1px solid black;
+    background: white;
+    color: black;
+  }
 }
