@@ -936,8 +936,6 @@ footer {
 }
 
 /* Responsive Design */
-/* Mobile Responsive Fixes - Replace your existing mobile styles with these */
-
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
@@ -948,11 +946,11 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    /* Fixed: Keep the green/teal glassmorphism effect instead of black */
-    background: rgba(47, 79, 79, 0.95);
+    background: rgba(47, 79, 79, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     padding: 2rem 0;
     transform: translateY(-100%);
@@ -973,13 +971,18 @@ footer {
     display: block;
     padding: 1rem;
     font-size: 1.2rem;
-    /* Ensure text stays white on mobile */
     color: white !important;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0.25rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .hero-content {
@@ -1032,7 +1035,6 @@ footer {
     padding: 0 15px;
   }
 
-  /* Ensure all glassmorphism elements maintain their appearance on mobile */
   .tech-item,
   .cert-card,
   .project-card,
@@ -1058,7 +1060,6 @@ footer {
     color: white !important;
   }
 
-  /* Ensure buttons maintain their styling */
   .btn-primary {
     background: rgba(255, 255, 255, 0.2);
     color: white;
@@ -1123,7 +1124,6 @@ footer {
     text-align: center;
   }
 
-  /* Additional mobile-specific color fixes */
   .nav-brand .logo {
     color: white !important;
   }
@@ -1136,7 +1136,6 @@ footer {
     color: white !important;
   }
 
-  /* Ensure all text elements stay white on mobile */
   .hero-text h1,
   .hero-title,
   .subtitle,
@@ -1198,28 +1197,25 @@ footer {
   }
 }
 
-/* Additional fix for header transparency on mobile */
 @media (max-width: 768px) {
   header {
-    background: rgba(47, 79, 79, 0.95);
+    background: rgba(47, 79, 79, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
-/* Fix for any elements that might be turning white */
 @media (max-width: 768px) {
   * {
     color: inherit;
   }
 
-  /* Ensure the main background gradient is maintained */
   body {
     background: linear-gradient(135deg, #2f4f4f 0%, #008b8b 50%, #2f4f4f 100%);
   }
 
-  /* Ensure sections maintain their glassmorphism backgrounds */
   .tech-stack,
   .certifications,
   .projects,
